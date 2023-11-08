@@ -63,7 +63,8 @@ section{
     margin-bottom: 20px;
 }
 section.botoes{
-    margin: auto;
+    background-color: unset;
+    text-align: center;
 }
 fieldset{
     border: solid #6C24D4 3px;
