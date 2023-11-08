@@ -97,7 +97,7 @@ input[type=submit], input[type=reset] {
 input[type=submit] {
 
     background-color: green;
-    margin-left: 188px;   
+    margin-left: 188px;  
 }
 input[type=reset] {
     background-color: orange; 
