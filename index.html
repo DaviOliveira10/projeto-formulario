@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+        <h1>Cadastre-se aqui:</h1>
+        <form action="#" method="post">
+            <section>
+                <h2>Dados de Login</h2>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Preferencialmente Gmail">
+                <label for="senha1">Senha</label>
+                <input type="password" name="senha1" id="senha1" minlength="6" maxlength="30" size="20" required>
+                <label for="senha2">Confirme a Senha</label>
+                <input type="password" name="senha2" id="senha2" minlength="6" maxlength="30" size="20" required>
+            </section>
+            <section>
+                <h2>Dados Pessoais</h2>
+                <label for="name">Nome Completo</label>
+                <input type="text" name="name" id="name" minlength="8" maxlength="60" size="30"
+                    placeholder="Nome e Sobrenome">
+                <label for="nasc">Data de Nascimento</label>
+                <input type="date" name="nasc" id="nasc" value="2000-01-01" min="1950-01-01" max="2023-12-31">
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="sexo" id="masc" value="M">
+                    <label for="masc" class="limpo">Masculino</label> <br>
+                    <input type="radio" name="sexo" id="fem" value="F">
+                    <label for="fem" class="limpo">Feminino</label> <br>
+                    <input type="radio" name="sexo" id="pni" value="NI">
+                    <label for="pni" class="limpo">Prefiro não informar</label>
+                </fieldset>
+            </section>
+            <section>
+                <h2>Dados Profissionais</h2>
+                <label for="atuacao">Área de Atuação</label>
+                <select name="atuacao" id="atuacao" size="5">
+                    <option value="DFE">Desenvolvimento Front-End</option>
+                    <option value="DBE">Desenvolvimento Back-End</option>
+                    <option value="DFS">Desenvolvimento Full-Stack</option>
+                    <option value="DM">Desenvolvimento Móvel</option>
+                    <option value="RDC">Redes de Computadores</option>
+                    <option value="EGH">Engenharia de Hardware</option>
+                    <option value="SDI">Segurança da Informação</option>
+                </select>
+                <label for="ndc">Nível de conhecimentos</label>
+                Básico<input class="nivel" type="range" name="ndc" id="ndc" min="1" max="10" step="1">Avançado
+                <label for="exp">Tempo de experiência</label>
+                <input type="number" name="exp" id="exp" min="0" max="40"> ano(s)
+                <label for="preco">Pretensão Salarial</label>
+                R$ <input type="number" name="preco" id="preco" min="1320" max="3000" step="0.01"> no mínimo
+                <fieldset>
+                    <legend>Linguagem que conhece</legend>
+                    <input type="checkbox" name="linguagens" id="JS">
+                    <label class="limpo" for="JS">JavaScript</label><br>
+                    <input type="checkbox" name="linguagens" id="PHP">
+                    <label class="limpo" for="PHP">PHP</label><br>
+                    <input type="checkbox" name="linguagens" id="Python">
+                    <label class="limpo" for="Python">Python</label><br>
+                    <input type="checkbox" name="linguagens" id="C">
+                    <label class="limpo" for="C">C / C++ / C#</label><br>
+                    <input type="checkbox" name="linguagens" id="Java">
+                    <label class="limpo" for="Java">Java</label><br>
+                    <input type="checkbox" name="linguagens" id="Outras">
+                    <label class="limpo" for="Outras">Outras</label>
+                </fieldset>
+                <label for="horario">Horário</label>
+                <select name="horario" id="horario">
+                    <option value="Manha" selected>Manhã</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noite">Noite</option>
+                </select>
+            </section>
+            <section>
+                <h2>Carta de Apresentação</h2>
+                <label for="msg">Deixe sua mensagem:</label>
+                <textarea name="msg" id="msg" cols="30" rows="10" class="texto"></textarea>
+                <input type="checkbox" name="autorizacao" id="autorizacao">
+                <label class="limpo" for="autorizacao">Autorizo a divulgação da minha mensagem aos membros da equipe
+                    !</label>
+            </section>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+</body>
+
+</html>
