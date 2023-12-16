@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <main>
@@ -15,33 +15,33 @@
             <section>
                 <h2>Dados de Login</h2>
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Preferencialmente Gmail">
+                <input type="email" name="email" id="email" placeholder="Preferencialmente Gmail" required>
                 <label for="senha1">Senha</label>
-                <input type="password" name="senha1" id="senha1" minlength="6" maxlength="30" size="20" required>
+                <input type="password" name="senha1" id="senha1" minlength="6" maxlength="30" size="20" required placeholder="Mínimo 6 caracteres">
                 <label for="senha2">Confirme a Senha</label>
-                <input type="password" name="senha2" id="senha2" minlength="6" maxlength="30" size="20" required>
+                <input type="password" name="senha2" id="senha2" minlength="6" maxlength="30" size="20" required placeholder="Mínimo 6 caracteres">
             </section>
             <section>
                 <h2>Dados Pessoais</h2>
                 <label for="name">Nome Completo</label>
                 <input type="text" name="name" id="name" minlength="8" maxlength="60" size="30"
-                    placeholder="Nome e Sobrenome">
+                    placeholder="Nome e Sobrenome" required>
                 <label for="nasc">Data de Nascimento</label>
                 <input type="date" name="nasc" id="nasc" value="2000-01-01" min="1950-01-01" max="2023-12-31">
-                <fieldset>
+                <fieldset required>
                     <legend>Sexo</legend>
-                    <input type="radio" name="sexo" id="masc" value="M">
+                    <input type="radio" name="sexo" id="masc" value="M" required>
                     <label for="masc" class="limpo">Masculino</label> <br>
-                    <input type="radio" name="sexo" id="fem" value="F">
+                    <input type="radio" name="sexo" id="fem" value="F" required>
                     <label for="fem" class="limpo">Feminino</label> <br>
-                    <input type="radio" name="sexo" id="pni" value="NI">
+                    <input type="radio" name="sexo" id="pni" value="NI" required>
                     <label for="pni" class="limpo">Prefiro não informar</label>
                 </fieldset>
             </section>
             <section>
                 <h2>Dados Profissionais</h2>
                 <label for="atuacao">Área de Atuação</label>
-                <select name="atuacao" id="atuacao" size="5">
+                <select name="atuacao" id="atuacao" size="5" required>
                     <option value="DFE">Desenvolvimento Front-End</option>
                     <option value="DBE">Desenvolvimento Back-End</option>
                     <option value="DFS">Desenvolvimento Full-Stack</option>
@@ -51,14 +51,14 @@
                     <option value="SDI">Segurança da Informação</option>
                 </select>
                 <label for="ndc">Nível de conhecimentos</label>
-                Básico<input class="nivel" type="range" name="ndc" id="ndc" min="1" max="10" step="1">Avançado
+                Básico<input class="nivel" type="range" name="ndc" id="ndc" min="1" max="10" step="1" >Avançado
                 <label for="exp">Tempo de experiência</label>
-                <input type="number" name="exp" id="exp" min="0" max="40"> ano(s)
+                <input type="number" name="exp" id="exp" min="0" max="40" value="1"> ano(s)
                 <label for="preco">Pretensão Salarial</label>
-                R$ <input type="number" name="preco" id="preco" min="1320" max="3000" step="0.01"> no mínimo
+                R$ <input type="number" name="preco" id="preco" min="1320" max="3000" step="0.01" value="1320"> no mínimo
                 <fieldset>
                     <legend>Linguagem que conhece</legend>
-                    <input type="checkbox" name="linguagens" id="JS">
+                    <input type="checkbox" name="linguagens" id="JS" checked>
                     <label class="limpo" for="JS">JavaScript</label><br>
                     <input type="checkbox" name="linguagens" id="PHP">
                     <label class="limpo" for="PHP">PHP</label><br>
@@ -80,11 +80,10 @@
             </section>
             <section>
                 <h2>Carta de Apresentação</h2>
-                <label for="msg">Deixe sua mensagem:</label>
-                <textarea name="msg" id="msg" cols="30" rows="10" class="texto"></textarea>
+                <label for="msg">Deixe sua mensagem:(Obrigatório)</label>
+                <textarea name="msg" id="msg" cols="30" rows="10" class="texto" required></textarea>
                 <input type="checkbox" name="autorizacao" id="autorizacao">
-                <label class="limpo" for="autorizacao">Autorizo a divulgação da minha mensagem aos membros da equipe
-                    !</label>
+                <label class="limpo" for="autorizacao">Autorizo a divulgação da minha mensagem aos membros da equipe !</label>
             </section>
             <section class="botoes">
                 <input type="submit" value="Enviar">
